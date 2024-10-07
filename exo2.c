@@ -1,15 +1,23 @@
 #include <stdio.h>
 
-int somme(int,int);
+int factorielle(int);
 
 int main(){
-    int a = somme(4,5);
+    int chiffre=5;
+    int a = factorielle(chiffre);
 
-    printf("Voici la somme %d\n",a);
+    printf("Voici la factorielle de %d : %d\n",chiffre,a);
 }
 
-int somme(int from, int to){
+int factorielle(int to){
 
-    int addition=from+to;
-    return addition;
+    int factorielle=1;
+    int i;
+    for (int i = to; i > 0 ; i--)
+    {
+        factorielle=factorielle*i;
+        printf("%d\n",factorielle);
+    }
+    
+    return factorielle;
 }
